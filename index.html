@@ -1,0 +1,38 @@
+<!DOCTYProwE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>My TodoList</title>
+  </head>
+  <body>
+    <section class="todo-Header">
+      <div class="todo-list" style="text-align: left; font-size: 24px">
+        <h3 style="margin: 5px">
+          My Todo-List
+          <img src="/images/icon.jpeg" style="width: 24px" />
+        </h3>
+        <div class="row">
+          <input
+            type="text"
+            id="inputBox"
+            class="myInput"
+            placeholder="Add your Task"
+            required
+          />
+          <button onclick="addTask()" class="addBtn">ADD</button>
+        </div>
+        <ul class="list">
+          <!-- <li class="checked"><b>Wake up</b></li>
+          <li><b>Read</b></li>
+          <li><b>Write Code</b></li>
+          <li><b>game</b></li>
+          <li><b>Hit Gym</b></li> -->
+        </ul>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
