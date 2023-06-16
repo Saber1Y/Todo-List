@@ -79,3 +79,17 @@ ul li ::before {
 .list {
   font-size: 24px;
 }
+ul li span {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+}
+ul li span:hover {
+  background: #edeef0;
+}
