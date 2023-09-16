@@ -1,9 +1,10 @@
-/* * {
+* {
   margin: 0;
   padding: 0;
   font-family: "poppins", "sans-serif";
   box-sizing: border-box;
 }
+
 .todo-Header {
   width: 100%;
   min-height: 100vh;
@@ -13,6 +14,7 @@
   text-align: center;
   align-items: center;
 }
+
 .todo-list {
   width: 100%;
   max-width: 540px;
@@ -22,12 +24,12 @@
   border-radius: 20px;
   font-weight: 600;
 }
+
 #main-todo {
   display: flex;
   align-items: center;
   gap: 5px;
-  font-family: "Lato", sans-serif;
-  font-family: "Rubik", sans-serif;
+  font-family: "Lato", sans-serif, "Rubik", sans-serif;
 }
 
 .row {
@@ -42,27 +44,32 @@
   border-color: lightgrey;
   max-width: 100%;
 }
+
 input {
   background: transparent;
   font-size: large;
   font-weight: 35px;
   border: none;
 }
+
 .myInput {
   flex-grow: 1;
   font: 18px sans-serif;
   padding-left: 25px;
   caret-color: red;
 }
+.myInput::-moz-placeholder {
+  padding: 0 10px;
+  font-family: "Lato", sans-serif, "Noto Sans Mahajani", sans-serif, "Rubik", sans-serif;
+}
 .myInput::placeholder {
   padding: 0 10px;
-  font-family: "Lato", sans-serif;
-  font-family: "Noto Sans Mahajani", sans-serif;
-  font-family: "Rubik", sans-serif;
+  font-family: "Lato", sans-serif, "Noto Sans Mahajani", sans-serif, "Rubik", sans-serif;
 }
 .myInput:focus {
   outline: none;
 }
+
 .addBtn {
   text-align: center;
   margin: 0 auto;
@@ -79,15 +86,18 @@ input {
 .addBtn:hover {
   opacity: 0.4;
 }
+
 ul li {
   position: relative;
   list-style: none;
   font-size: 17px;
   padding: 10px 2px 12px 50px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   cursor: pointer;
 }
-ul li ::before {
+ul li::before {
   content: "";
   position: absolute;
   height: 28px;
@@ -98,9 +108,11 @@ ul li ::before {
   top: 7px;
   left: 8px;
 }
+
 .list {
   font-size: 24px;
 }
+
 ul li span {
   position: absolute;
   left: 0;
@@ -114,4 +126,4 @@ ul li span {
 }
 ul li span:hover {
   background: #edeef0;
-} */
+}/*# sourceMappingURL=main.css.map */
