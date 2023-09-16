@@ -1,18 +1,22 @@
 @import 'variables';
 @import 'resets';
-
+@import 'responsive';
 
 .todo-Header {
   width: 100%;
-  min-height: 100vh;
+  max-width: 400px;
+  min-height: 100%;
   background: linear-gradient($primary-bg, $secondary-bg);
   padding: 10px;
-  margin: 0 auto;
+  margin: auto auto;
   text-align: center;
   align-items: center;
+
+  @include respond-to($mobile) {
+    // margin: auto auto;
+  }
+
 }
-
-
 .todo-list {
   width: 100%;
   max-width: 540px;
@@ -23,7 +27,7 @@
   font-weight: $font-weight;
 }
 
-// #main-todo
+
 #main-todo {
   display: flex;
   align-items: center;
@@ -31,7 +35,6 @@
   font-family: "Lato", sans-serif, "Rubik", sans-serif;
 }
 
-// .row
 .row {
   display: flex;
   align-items: center;
@@ -43,9 +46,12 @@
   background-color: lightgray;
   border-color: lightgrey;
   max-width: 100%;
-}
 
-// input
+  @include respond-to($mobile) {
+     padding: 0 auto;
+     width: 400px;
+}
+}
 input {
   background: transparent;
   font-size: large;
@@ -53,7 +59,7 @@ input {
   border: none;
 }
 
-// .myInput
+
 .myInput {
   flex-grow: 1;
   font: 18px sans-serif;
@@ -63,12 +69,21 @@ input {
     padding: 0 10px;
     font-family: "Lato", sans-serif, "Noto Sans Mahajani", sans-serif, "Rubik", sans-serif;
   }
+  @include respond-to($mobile) {
+    .myInput::placeholder {
+        padding: 0 40px;
+        font: 1px sans-serif;
+    }
+    .myInput {
+        padding-left: 5px;
+       
+    }
+  }
   &:focus {
     outline: none;
   }
 }
 
-// .addBtn
 .addBtn {
   text-align: center;
   margin: 0 auto;
@@ -83,10 +98,14 @@ input {
   transition: 1s;
   &:hover {
     opacity: 0.4;
-  }
-}
+  } 
 
-// ul li
+  @include respond-to($mobile) {
+    padding: 5px 3px;
+    font-size: 10px;
+    margin-left: -18px;
+}
+}
 ul li {
   position: relative;
   list-style: none;
@@ -107,12 +126,12 @@ ul li {
   }
 }
 
-// .list
+
 .list {
   font-size: 24px;
 }
 
-// pan
+
 ul li span {
   position: absolute;
   left: 0;
@@ -127,3 +146,4 @@ ul li span {
     background: #edeef0;
   }
 }
+

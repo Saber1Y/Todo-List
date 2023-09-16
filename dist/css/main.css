@@ -7,14 +7,14 @@
 
 .todo-Header {
   width: 100%;
-  min-height: 100vh;
+  max-width: 400px;
+  min-height: 100%;
   background: linear-gradient(#153677, #4e085f);
   padding: 10px;
-  margin: 0 auto;
+  margin: auto auto;
   text-align: center;
   align-items: center;
 }
-
 .todo-list {
   width: 100%;
   max-width: 540px;
@@ -44,6 +44,12 @@
   border-color: lightgrey;
   max-width: 100%;
 }
+@media (max-width: 340px) {
+  .row {
+    padding: 0 auto;
+    width: 400px;
+  }
+}
 
 input {
   background: transparent;
@@ -66,6 +72,19 @@ input {
   padding: 0 10px;
   font-family: "Lato", sans-serif, "Noto Sans Mahajani", sans-serif, "Rubik", sans-serif;
 }
+@media (max-width: 340px) {
+  .myInput .myInput::-moz-placeholder {
+    padding: 0 40px;
+    font: 1px sans-serif;
+  }
+  .myInput .myInput::placeholder {
+    padding: 0 40px;
+    font: 1px sans-serif;
+  }
+  .myInput .myInput {
+    padding-left: 5px;
+  }
+}
 .myInput:focus {
   outline: none;
 }
@@ -85,6 +104,13 @@ input {
 }
 .addBtn:hover {
   opacity: 0.4;
+}
+@media (max-width: 340px) {
+  .addBtn {
+    padding: 5px 3px;
+    font-size: 10px;
+    margin-left: -18px;
+  }
 }
 
 ul li {
