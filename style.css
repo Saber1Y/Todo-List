@@ -15,48 +15,72 @@
   max-width: 540px;
   background: #fff;
   margin: 100px auto 20px;
-  padding: 40px 30px 70px;
+  padding: 40px 30px;
   border-radius: 20px;
+  font-weight: 600;
 }
-.myInput {
+#main-todo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Lato", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+/* .myInput {
   border-radius: 10px;
   border-style: none;
   border: none;
-  /* color: lightgray; */
-}
+  margin: auto;
 
+} */
 .row {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: space-evenly;
   color: #000000;
-  margin: 30px auto 30px;
+  margin: 30px auto;
   border-radius: 20px;
   border: none;
   background-color: lightgray;
   border-color: lightgrey;
+  max-width: 100%;
 }
 input {
-  flex: 1;
-  caret-color: red;
+
   background: transparent;
   font-size: large;
   font-weight: 35px;
+  border: none;
+}
+.myInput {
+  flex-grow: 1;
+  font: 18px sans-serif;
+}
+.myInput::placeholder {
+  padding: 0 10px;
+  font-family: "Lato", sans-serif;
+  font-family: "Noto Sans Mahajani", sans-serif;
+  font-family: "Rubik", sans-serif;
+}
+.myInput:focus {
+  outline: none;
 }
 .addBtn {
+  text-align: center;
+  margin: 0 auto;
   background-color: red;
-  width: 50px;
   border-radius: 10px;
   border-style: none;
   border: none;
   outline: none;
-  padding: 16px 50px;
+  padding: 14px 20px;
   color: #fff;
   cursor: pointer;
   transition: 1s;
 }
-/* .addBtn:hover {
-  background: lightgray;
-} */
+.addBtn:hover {
+  opacity: 0.4;
+}
 ul li {
   position: relative;
   list-style: none;
