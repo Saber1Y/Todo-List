@@ -46,7 +46,6 @@
   max-width: 100%;
 }
 input {
-
   background: transparent;
   font-size: large;
   font-weight: 35px;
@@ -55,6 +54,8 @@ input {
 .myInput {
   flex-grow: 1;
   font: 18px sans-serif;
+  padding-left: 25px;
+  caret-color: red;
 }
 .myInput::placeholder {
   padding: 0 10px;
