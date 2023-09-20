@@ -16,5 +16,10 @@ function addTask() {
         listTodo.innerHTML = `<input type="checkBox"> ${addedList}`;
         list.appendChild(listTodo);
         inputBox.value = "";
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'X';
+        deleteButton.classList.add('delete-button');
+        listTodo.appendChild(deleteButton);
     }
 }

@@ -162,4 +162,17 @@ ul li span {
 }
 ul li span:hover {
   background: #edeef0;
+}
+
+ul#list li .delete-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px auto;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: 15px;
 }/*# sourceMappingURL=main.css.map */
