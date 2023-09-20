@@ -1,16 +1,20 @@
 const inputBox = document.getElementById('inputBox');
 const list = document.getElementById('list');
+const listItem = document.getElementById('listItem');
+const addBtn = document.querySelector('.addBtn');
+
+addBtn.addEventListener('click', () => {
+  addTask();
+});
 
 function addTask() {
-    if (inputBox.value === "") {
-        alert('something must be written');
-    } else {
-        let li = document.createElement('list');
-        li.innerHTML = inputBox.value;
-        list.appendChild(li);
-        let span = document.createElement('span');
-        span.innerHTML = "\u00d7"
-        li.appendChild(span);
+    const addedList = inputBox.value;
+
+    if( addedList !== "") {
+        const listTodo = document.createElement('li');
+        // listTodo.textContent = addedList;
+        listTodo.innerHTML = `<input type="checkBox"> ${addedList}`;
+        list.appendChild(listTodo);
+        inputBox.value = "";
     }
-     inputBox.value = "";
 }

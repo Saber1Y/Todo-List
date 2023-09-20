@@ -7,7 +7,7 @@
 
 .todo-Header {
   width: 100%;
-  max-width: 400px;
+  max-width: 100%;
   min-height: 100%;
   background: linear-gradient(#153677, #4e085f);
   padding: 10px;
@@ -30,6 +30,12 @@
   align-items: center;
   gap: 5px;
   font-family: "Lato", sans-serif, "Rubik", sans-serif;
+}
+@media (max-width: 340px) {
+  #main-todo {
+    font-size: 20px;
+    gap: 8px;
+  }
 }
 
 .row {
@@ -58,6 +64,14 @@ input {
   border: none;
 }
 
+input[type=checkbox] {
+  margin-right: 10px;
+  cursor: pointer;
+}
+input[type=checkbox].completed {
+  text-decoration: line-through;
+}
+
 .myInput {
   flex-grow: 1;
   font: 18px sans-serif;
@@ -73,16 +87,16 @@ input {
   font-family: "Lato", sans-serif, "Noto Sans Mahajani", sans-serif, "Rubik", sans-serif;
 }
 @media (max-width: 340px) {
-  .myInput .myInput::-moz-placeholder {
-    padding: 0 40px;
-    font: 1px sans-serif;
+  .myInput::-moz-placeholder {
+    font-size: 13px;
   }
-  .myInput .myInput::placeholder {
-    padding: 0 40px;
-    font: 1px sans-serif;
+  .myInput::placeholder {
+    font-size: 13px;
   }
   .myInput .myInput {
     padding-left: 5px;
+    font-size: 5px;
+    color: yellow;
   }
 }
 .myInput:focus {
@@ -133,10 +147,6 @@ ul li::before {
   background-position: center;
   top: 7px;
   left: 8px;
-}
-
-.list {
-  font-size: 24px;
 }
 
 ul li span {
